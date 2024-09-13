@@ -191,16 +191,16 @@ for (let i = 4; i >= 1; i--) {
   console.log();
 }
 
-/* 
-    *****
-   *****
-  *****
+/*
  *****
-*****
-*/
+ *****
+ *****
+ *****
+ *****
+ */
 console.log("solid Rhombus");
 for (let i = 1; i <= 5; i++) {
-    // spaces
+  // spaces
   for (let j = 1; j <= 5 - i; j++) {
     process.stdout.write(" ");
   }
@@ -212,7 +212,73 @@ for (let i = 1; i <= 5; i++) {
 }
 
 /*
-
+      1
+     2 2
+    3 3 3
+   4 4 4 4
+  5 5 5 5 5
 
 */
-console.log("Number pyramid")
+console.log("Number pyramid");
+for (let i = 1; i <= 5; i++) {
+  // spaces
+  for (let j = 1; j <= 5 - i; j++) {
+    process.stdout.write(" ");
+  }
+  // numbers
+  for (let j = 1; j <= i; j++) {
+    process.stdout.write(i + " ");
+  }
+  console.log();
+}
+/*
+      1
+    2 1 2
+  3 2 1 2 3
+4 3 2 1 2 3 4
+*/
+console.log("palindrome");
+for (let i = 1; i <= 4; i++) {
+  // spaces
+  for (let j = 1; j <= 4 - i; j++) {
+    process.stdout.write(" ");
+  }
+  // first half
+  for (let j = i; j >= 1; j--) {
+    process.stdout.write(j.toString());
+  }
+  // second half
+  for (let j = 1; j <= i; j++) {
+    process.stdout.write(j.toString());
+  }
+  console.log();
+}
+/*
+2 * i - 1 => stars
+spaces-> n-i
+*/
+console.log("Diamond Pattern")
+for(let i = 1; i<=5; i++){
+  // upper half
+  // spaces
+  for(let j=1; j<=5-i; j++){
+    process.stdout.write(" ")
+  }
+  for(let j =1; j<=2*i-1; j++){
+    process.stdout.write("*")
+  }
+  console.log()
+}
+// lower half
+for(let i = 4; i>=1; i--){
+  // upper half
+  // spaces
+  for(let j=1; j<=5-i; j++){
+    process.stdout.write(" ")
+  }
+  for(let j =1; j<=2*i-1; j++){
+    process.stdout.write("*")
+  }
+  console.log()
+} 
+
