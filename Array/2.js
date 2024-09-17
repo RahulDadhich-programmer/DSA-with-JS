@@ -8,7 +8,14 @@
 // { 3, 1, 3, 1, -4, -2, -2 }
 // { 3, 4, -7, 3, 1, 3, 1, -4, -2, -2 }
 
-// not solved
-function subArrayWithZero(){
-
+function subArrayWithZero(arr) {
+  let cs = 0; //current sum
+  for (let val of arr) {
+    cs += val;
+    if (cs === 0) {
+      return cs;
+    }
+  }
 }
+let arr = [3, 4, -7, 3, 1, 3, 1, -4, -2, -2]
+console.log(subArrayWithZero(arr))
